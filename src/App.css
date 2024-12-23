@@ -1,0 +1,464 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+/* navbar */
+.navbar {
+  padding: 1em;
+  background: #0073e6;
+  color: white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.france {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.link {
+  margin: 0 1.5em;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .link {
+    margin: 0.5em 0;
+    font-size: 18px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .link {
+    font-size: 16px;
+    margin: 0.5em 0;
+  }
+}
+
+
+
+/* home */
+.homepage{
+    width: 100%;
+    height: 100vh; 
+    color: white;  
+}
+.france{
+  font-family: cursive;
+  font-size: 36px;
+  font-style: oblique;
+  text-decoration: none;
+  color: rgb(225, 218, 218);
+  padding-right: 80px;  
+}
+.content h1{
+  color: white;
+  font-style: italic;
+}
+.Eiffel-Video{
+  height: 90%;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ /* this is use for blocking element css issue, container overlaying the video */
+    z-index: 0;
+    position: relative;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content h1 {
+      font-size: 24px;
+  }
+
+  .france {
+      font-size: 24px;
+      padding-right: 40px;
+  }
+
+  .content p {
+      font-size: 14px;
+      text-align: center;
+      margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+      padding: 20px;
+      text-align: center;
+  }
+
+  .content h1 {
+      font-size: 18px;
+  }
+
+  .france {
+      font-size: 18px;
+      padding-right: 20px;
+  }
+
+  .content p {
+      font-size: 12px;
+  }
+
+  .Eiffel-Video {
+      height: 80%;
+  }
+}
+/* contactpopup */
+.contact-us-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.open-modal-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #d65e9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* destinations */
+
+.destination {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+destination video {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filters {
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.place-list {
+  list-style-type: none;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.place-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.place-icon {
+  color: #ff6347;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.place-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.no-results {
+  color: #888;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .place-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .place-image {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    padding: 8px;
+  }
+
+  .filters label {
+    font-size: 12px;
+  }
+
+  .place-item {
+    padding: 10px;
+  }
+
+  .place-image {
+    max-width: 100px;
+  }
+}
+
+  /* footer */
+  .footer {
+    background-color: #c6dfeb; 
+    color: #343a40; 
+    padding: 10px 20px; 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #17a2b8;
+  }
+  
+  .footer-title {
+    font-size: 1.8rem; 
+    margin-bottom: 10px;
+    color: #17a2b8;
+  }
+  
+  .footer-contact h4 {
+    font-size: 1rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #0f1419; 
+  }
+  
+  .icon {
+    color: #17a2b8; 
+    font-size: 1.2rem;
+  }
+  
+  .footer-contact h4:hover {
+    color: #2f46a9; 
+    transition: color 0.3s;
+  }
+  
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #272b2f; 
+  }
+  
+  .footer {
+    margin-bottom: 0;
+  }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-contact h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-title {
+    font-size: 1.2rem;
+  }
+
+  .footer-contact h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+}
+  

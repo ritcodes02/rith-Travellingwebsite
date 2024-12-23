@@ -1,0 +1,87 @@
+.book-now-form {
+    width: 100%;
+    max-width: 600px;
+    margin:  auto;
+    padding: 20px;
+    margin-top: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+
+  }
+  
+  /* background image */
+  #book {
+    background-image: url('/src/assets/mont_home.jpg');
+    background-size: cover; /* Cover entire screen */
+    background-position: center; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    margin: 0;
+  }
+  
+  .book-now-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .book-now-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-now-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .book-now-form select,
+  .book-now-form input,
+  .book-now-form button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .book-now-form input[type="number"] {
+    width: 60px;
+  }
+  
+  .book-now-form .price {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(226, 211, 149);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .book-now-form button {
+    background-color: #4CAF50;
+    color: rgb(244, 240, 240);
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-now-form button:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 768px) {
+    .book-now-form {
+      width: 90%;
+    }
+  
+    .book-now-form label,
+    .book-now-form input,
+    .book-now-form select,
+    .book-now-form button {
+      font-size: 14px;
+    }
+  }
+  
